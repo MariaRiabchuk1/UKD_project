@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: steelblue;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    border-bottom: 2px solid steelblue;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid steelblue;
+    }
+
+    h1, h2 {
+        color: steelblue;
+        margin-bottom: 10px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: white;
+    color: darkgrey;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+button, .btn {
+    background: steelblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+button:hover, .btn:hover {
+    background: steelblue;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}

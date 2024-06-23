@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Post</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Delete Post</h1>
+            <div class="auth-buttons">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'account_logout' %}" class="btn">Log Out</a>
+                {% else %}
+                    <a href="{% url 'account_login' %}" class="btn">Log In</a>
+                {% endif %}
+            </div>
+        </div>
+        <p>Are you sure you want to delete "{{ post.title }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-delete">Delete</button>
+            <a href="{% url 'blog_post' post.id %}" class="btn btn-cancel">Cancel</a>
+        </form>
+    </div>
+    <footer>
+        &copy; 2024 My Blog
+    </footer>
+</body>
+</html>

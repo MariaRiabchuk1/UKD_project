@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Post</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Update Post</h1>
+            <div class="auth-buttons">
+                {% if user.is_authenticated %}
+                    <!-- Remove the Log Out button -->
+                {% else %}
+                    <a href="{% url 'account_login' %}" class="btn">Log In</a>
+                {% endif %}
+            </div>
+            <a href="{% url 'blog_list' %}" class="btn back-button">Back</a>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Save</button>
+        </form>
+    </div>
+    <footer>
+        &copy; 2024 My Blog
+    </footer>
+</body>
+</html>

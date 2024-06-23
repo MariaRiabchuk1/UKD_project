@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+        <div>
+            <a href="{% url 'blog_list' %}" class="btn">Back to Home</a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 My Blog
+    </footer>
+</body>
+</html>
